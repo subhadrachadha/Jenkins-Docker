@@ -10,6 +10,7 @@ pipeline{
                   post{
                       success{
                           echo 'Now Archiving ...'
+                          sh 'whoami'
                           archiveArtifacts artifacts : '**/*.war'
                       }
                   }
